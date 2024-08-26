@@ -9,5 +9,4 @@ def replace_all(mainText: str, target: str, repl: str) -> str:
     Returns:
         str: The new string with the replacements made.
     """
-    replaced = mainText.replace(target, repl)
-    return replaced
+    return mainText.replace(target, repl)
