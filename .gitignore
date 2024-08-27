@@ -3,5 +3,5 @@
 /python notatki.pdf
 /2_Django
 /.idea
-/.venv
+.venv/
 1_podstawy/main.py
