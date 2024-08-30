@@ -1,7 +1,5 @@
-secrete = 'tramsgferagfuoy'
-#1. Replace all the of 'gf' with ' ' in the secrete text
-secrete = secrete.replace('gf', ' ')
-#2. Reverse the String
-secrete = secrete[::-1]
-#3. Display the result
-print(secrete)
+def replace_all(mainText: str, target: str, repl: str) -> str:
+    replaced = mainText.replace(target, repl)
+    return replaced
+
+print(replace_all("Hello World", "World", "Python"))
