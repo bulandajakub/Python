@@ -1,7 +1,7 @@
 from functools import reduce
 
 
-def sum_of_integers(n: int) -> int:
+def factorial(n: int) -> int:
     """
     This function calculates the factorial of a given integer n.
     
@@ -12,8 +12,9 @@ def sum_of_integers(n: int) -> int:
         int: The factorial of the input number n.
     """
     return reduce(lambda x, y: x * y, range(1, n + 1), 1)
+    # return n*factorial(n-1) if n > 1 else 1
 
 
-print(sum_of_integers(0))
-print(sum_of_integers(3))
-print(sum_of_integers(5))
+print(factorial(0))
+print(factorial(3))
+print(factorial(5))
