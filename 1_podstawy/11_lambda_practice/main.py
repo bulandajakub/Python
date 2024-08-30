@@ -12,25 +12,25 @@ Given a list of numbers, use a lambda function with sorted() to sort the numbers
 '''
 nums = [2, 3, 4, 7, 5]
 
-def sort_numbers(numbers):
-    return (lambda x: sorted(x))(nums)
 
-
-print(sort_numbers(nums))
+sorted_numbers = (lambda x: sorted(x))(nums)
+print(sorted_numbers)
 
 
 '''
-Write a lambda function that takes two numbers as input and returns their product.
-Use this function with map() to square each number in a list.
+Square each number in a list.
 '''
+numbers = [1, 2, 3, 4, 5]
+
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print(squared_numbers)
 
 
 '''
 Create a lambda function that checks if a number is even.
 Use this function with filter() to filter even numbers from a list.
 '''
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-
-'''
-Combine map, filter, and reduce with lambda expressions to calculate the product of even numbers in a list.
-'''
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)
