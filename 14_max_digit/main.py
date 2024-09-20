@@ -9,3 +9,4 @@ def max_digit(value: int) -> int:
         int: The maximum digit in the given integer.
     """
     return int(max(list(str(value))))
+    # return max(map(int, str(number)))
