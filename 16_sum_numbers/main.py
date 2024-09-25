@@ -8,6 +8,7 @@ def sum_numbers(text: str) -> int:
         return sum(map(int, numbers))
     else:
         return 0
+# sum_numbers=lambda t,r=__import__("re").compile(r'\b\d+\b'):sum(map(int,r.findall(t)))
     
 
 
