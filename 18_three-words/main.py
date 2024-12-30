@@ -15,6 +15,17 @@ def three_words(text: str) -> bool:
         # Return True if there are three consecutive alphabetic words
         if count == 3:
             return True
+    # Return False if no three consecutive words are found
+    return False
+
+    # Second solution
+    # \b[a-zA-Z]+\b matches a standalone alphabetic word,
+    # and \s matches one or more whitespace characters
+    # re.search returns a match object if the pattern is found in the text
+    # bool() converts the match object to a boolean
+    
+    # return bool(re.search(r'\b[a-zA-Z]+\b\s+\b[a-zA-Z]+\b\s+\b[a-zA-Z]+\b', text))
+
 
 assert three_words("Hello World hello") == True
 assert three_words("He is 123 man") == False
