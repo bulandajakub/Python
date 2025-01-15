@@ -19,15 +19,14 @@ def three_words(text: str) -> bool:
     return False
 
     # Second solution
-    # \b[a-zA-Z]+\b matches a standalone alphabetic word,
-    # and \s matches one or more whitespace characters
-    # re.search returns a match object if the pattern is found in the text
-    # bool() converts the match object to a boolean
-    
-    # return bool(re.search(r'\b[a-zA-Z]+\b\s+\b[a-zA-Z]+\b\s+\b[a-zA-Z]+\b', text))
+    # return True if re.search('\D+\s\D+\s\D+', words) else False
 
 
+# These "asserts" are used for self-checking
 assert three_words("Hello World hello") == True
 assert three_words("He is 123 man") == False
 assert three_words("1 2 3 4") == False
 assert three_words("bla bla bla bla") == True
+assert three_words("Hi") == False
+
+print("The mission is done! Click 'Check Solution' to earn rewards!")
