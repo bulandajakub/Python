@@ -2,17 +2,27 @@ def fuzzy_string_match(str1: str, str2: str, threshold: int) -> bool:
   """
   Checks if the number of differing characters between two strings is within a given threshold.
 
-    This function compares two strings character-by-character and counts how many positions
-    have different characters. It returns True if the count of differing characters is
-    less than or equal to the specified threshold; otherwise, it returns False.
+  This function compares two strings character-by-character and counts how many positions
+  have different characters. It returns True if the count of differing characters is
+  less than or equal to the specified threshold; otherwise, it returns False.
 
-    Args:
-        str1 (str): The first string to compare.
-        str2 (str): The second string to compare.
-        threshold (int): The maximum number of allowed differing characters.
+  Args:
+      str1 (str): The first string to compare.
+      str2 (str): The second string to compare.
+      threshold (int): The maximum number of allowed differing characters.
 
-    Returns:
-        bool: True if the number of differences is less than or equal to the threshold, False otherwise.
+  Returns:
+      bool: True if the number of differences is less than or equal to the threshold, False otherwise.
+      
+  Example:
+      str1 = "cat"
+      str2 = "car"
+      threshold = 1
+      
+      zip gives: [('c', 'c'), ('a', 'a'), ('t', 'r')]
+      Comparisons: False, False, True
+      sum: 1
+      1 <= 1 → True
   """
   return sum(a != b for a, b in zip(str1, str2)) <= threshold
 
