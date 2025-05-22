@@ -24,7 +24,7 @@ def fuzzy_string_match(str1: str, str2: str, threshold: int) -> bool:
       sum: 1
       1 <= 1 → True
   """
-  return sum(a != b for a, b in zip(str1, str2)) <= threshold
+  return sum(a != b for a, b in zip(str1, str2)) + abs(len(str1) - len(str2)) <= threshold
 
 
 print("Example:")
