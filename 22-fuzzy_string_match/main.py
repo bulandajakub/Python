@@ -22,10 +22,12 @@ def fuzzy_string_match(str1: str, str2: str, threshold: int) -> bool:
     return sum(a != b for a, b in zip_longest(str1, str2)) <= threshold
 
 
-"""0.5 seconds  # a != b
+"""
+0.5 seconds  # a != b
 1.0 seconds  # operator.ne(a, b)
 Use a != b unless you need to pass the comparison as a function.
-Prefer operator.ne in functional constructs like map(op.ne, list1, list2) or starmap(op.ne, iterable)"""
+Prefer operator.ne in functional constructs like map(op.ne, list1, list2) or starmap(op.ne, iterable)
+"""
 
 print("Example:")
 print(fuzzy_string_match("apple", "appel", 2))
