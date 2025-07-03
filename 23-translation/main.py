@@ -16,16 +16,23 @@ def translation(text: str) -> str:
     Returns:
         str: The translated text.
     """
-    vowels = set("aeiouy")
+    vowels = set("aeiouy") # using set for O(1) lookup
     result = []
-    append = result.append
+    append = result.append # local lookup optimization
     i = 0
     
     while i < len(text):
-        char = text[i]; 
-        append(char); i += 3 if char in vowels else 2 if char != ' ' else 1
+        char = text[i]
+        append(char)
+        i += 3 if char in vowels else 2 if char != ' ' else 1
     return ''.join(result)
 
+    # second
+    # import re,functools
+    # translate=functools.partial(re.sub,r"(\w)(\1\1|.)",r"\1")
+    
+    # third
+    # translate=lambda s:s and s[0]+translate(s[1+(s[0]!=' ')+(s[0]in'aeiouy'):])
 
 
 print("Example:")
